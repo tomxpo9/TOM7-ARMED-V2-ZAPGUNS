@@ -3,14 +3,14 @@
 
 ---
 
-<h3 align="center">✊🏻 By TOM7 For Peoples & Freedom</h3>
+<h3 align="center">By TOM7 For Peoples & Freedom</h3>
 <p align="center"><img src="https://e.top4top.io/p_3591myio31.gif" height="100" width="100"></p>
 
 ---
 
 <div align="center">
-   <h3 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30">WARNING & DISCLAIMER</h3>
-   <p align="center">🫵🏻 Please Dont Attack Any Website Without The Owner Permission.</p>
+   <h3 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"></h3>
+   <p align="center">Please Dont Attack Any Website Without The Owner Permission.</p>
    <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart Brother</p>
 </div>
 
