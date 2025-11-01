@@ -7,8 +7,11 @@
 
 ---
 
-<p align="center" color="green" style="italic">🫵🏻 ⚠️ Please Dont Attack Any Website Without Any Permission ⚠️</p>
-
+<div align="center">
+   <h3 align="center">⚠️ WARNING & DISCLAIMER ⚠️</h3>
+   <p align="center">🫵🏻 Please Dont Attack Any Website Without The Owner Permission.</p>
+   <p align="center">Im Responsible For The Destructions You Where Made. Be Smart Brother</p>
+</div>
 ---
 
 <div align="center">
