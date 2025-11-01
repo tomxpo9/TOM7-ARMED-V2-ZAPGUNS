@@ -13,13 +13,13 @@
 
 <div align="center">
    <h3>TOM7 ZAPGUNS Features</h3>
-   <p align="left"><li> HTTP & HTTPS Flood</li></p>
-   <p align="left">☢️ TCP Flood</p>
-   <p align="left">☢️ JSON Flood</p>
-   <p align="left">☢️ POST Flood</p>
-   <p align="left">☢️ XML-RPC Flood</p>
-   <p align="left">☢️ UDP Flood</p>
-   <p align="left">☢️ ICMP Flood</p>
+   <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
+   <p align="left"><li align="left"> TCP Flood</li></p>
+   <p align="left"><li align="left"> JSON Flood</li></p>
+   <p align="left"><li align="left"> POST Flood</li></p>
+   <p align="left"><li align="left"> XML-RPC Flood</li></p>
+   <p align="left"><li align="left"> UDP Flood</li></p>
+   <p align="left"><li align="left"> ICMP Flood</li></p>
 </div>
 
 <div align="center">
