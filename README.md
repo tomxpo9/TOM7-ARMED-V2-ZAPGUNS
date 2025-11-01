@@ -44,3 +44,14 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
 ```
 
 ---
+
+<div align="center">
+   <h2 align="center">Support TOM7</h2>
+   <p align="left">
+      By supporting Me, I will create new greatest think thats you never seen before.
+   </p>
+   <br>
+   <p align="left">
+      &Copy;Copyright TOM7 2025
+   </p>
+</div>
