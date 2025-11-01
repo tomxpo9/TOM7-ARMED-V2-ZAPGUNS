@@ -1,14 +1,15 @@
 <h1 align="center" color="red">TOM7 ARMED V2 | TM7 ZAPGUNS</h1>
+<p align="center"><img src="https://imgur.com/a/MtW3aQz" width="200" height="200"></p>
 
 ---
 
 <h3 align="center">✊🏻 By TOM7 For Peoples & Freedom</h3>
-<p align="center"><img src="https://e.top4top.io/p_3549l2rx01.gif" height="300" width="300"></p>
+<p align="center"><img src="https://imgur.com/a/Wvdfq7z" height="100" width="100"></p>
 
 ---
 
 <div align="center">
-   <h3 align="center">⚠️ WARNING & DISCLAIMER ⚠️</h3>
+   <h3 align="center"><img src="https://imgur.com/a/gU8NX78" width="30" height="30">WARNING & DISCLAIMER</h3>
    <p align="center">🫵🏻 Please Dont Attack Any Website Without The Owner Permission.</p>
    <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart Brother</p>
 </div>
