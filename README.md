@@ -8,6 +8,6 @@
   <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
   <img src="" alt="Attack Preview" width="16" height="16">
   <img src="" alt="Script Preview" width="16" height="16">
-  <img src="" alt="Available Methods" width="16" height="16">
+  <img src="https://cdn-icons-png.flaticon.com/512/905/905568.png" alt="Available Methods" width="16" height="16">
 </p>
 
