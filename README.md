@@ -38,7 +38,7 @@
 
 ---
 
-<h2 align="center">⚙️ Installation & Usages</h2>
+<h2 align="center"><img src="https://j.top4top.io/p_3591zhz0p1.gif" width="30" height="30"> Installation & Usages</h2>
 
 ```💻 shell command
 git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
@@ -51,7 +51,7 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
 ---
 
 <div align="center">
-   <h2 align="center">🤝🏻 Support TOM7 🤝🏻</h2>
+   <h2 align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="30" height="30"> Support TOM7</h2>
    <p align="left">
       By supporting Me, I will create new greatest think thats you never seen before.
    </p>
