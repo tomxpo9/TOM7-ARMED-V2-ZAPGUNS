@@ -19,7 +19,7 @@
   <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
 </p>
 
-![python3]: https://python.org 'Python3'
+[python3]: https://python.org 'Python3'
 ---
 
 **Installation & Usage**
