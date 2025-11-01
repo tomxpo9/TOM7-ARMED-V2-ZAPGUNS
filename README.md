@@ -6,10 +6,17 @@
 
 <p align="center">
   <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRct5OvjSCpUftyRMm3evgdPOa-f8LbwJFO-A&usqp=CAU" alt="Attack Preview" width="16" height="16">
-  <img src="https://s6.uupload.ir/files/1059643_g8hp.png" alt="Script Preview" width="16" height="16">
-  <img src="https://techcrunch.com/wp-content/uploads/2019/06/J2LlHqT3qJl0bG9Alpgc-1-730x438.png?w=730" alt="Available Methods" width="16" height="16">
 </p>
 
 [python3]: https://python.org 'Python3'
 [github issues]: https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2/issues 'enter'
+
+**Installation & Usage**
+
+```shell command
+git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
+cd TOM7-ARMED-ZAPGUNS-V2
+pip install -r requirements.txt
+sudo su
+python3 TOM7-ARMED-ZAPGUNS-V2.py
+```
