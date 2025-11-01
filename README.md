@@ -9,6 +9,19 @@
 
 <p align="center" color="green" style="italic">Please Dont Attack Any Website Without Any Permission!</p>
 
+---
+
+<div align="center">
+   <h3>TOM7 ZAPGUNS Features</h3>
+   <p>HTTP & HTTPS Flood</p>
+   <p>TCP Flood</p>
+   <p>JSON Flood</p>
+   <p>POST Flood</p>
+   <p>XML-RPC Flood</p>
+   <p>UDP Flood</p>
+   <p>ICMP Flood</p>
+</div>
+
 <div align="center">
    <img src="https://icon-library.com/images/github-icon-vector/github-icon-vector-27.jpg" width="30" height="30"/>
    <img src="https://brandlogos.net/wp-content/uploads/2021/11/discord-logo.png"  width="30" height="30" alt="discord" />
