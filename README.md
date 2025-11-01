@@ -52,6 +52,6 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
    </p>
    <br>
    <p align="left">
-      &Copy;Copyright TOM7 2025
+      &copy; Copyright TOM7 2025
    </p>
 </div>
