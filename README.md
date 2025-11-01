@@ -2,24 +2,24 @@
 
 ---
 
-<h3 align="center">By TOM7 For Peoples</h3>
+<h3 align="center">✊🏻 By TOM7 For Peoples</h3>
 <p align="center"><img src="https://e.top4top.io/p_3549l2rx01.gif" height="300" width="300"></p>
 
 ---
 
-<p align="center" color="green" style="italic">Please Dont Attack Any Website Without Any Permission!</p>
+<p align="center" color="green" style="italic">🫵🏻 ⚠️ Please Dont Attack Any Website Without Any Permission ⚠️</p>
 
 ---
 
 <div align="center">
    <h3>TOM7 ZAPGUNS Features</h3>
-   <p align="left">HTTP & HTTPS Flood</p>
-   <p align="left">TCP Flood</p>
-   <p align="left">JSON Flood</p>
-   <p align="left">POST Flood</p>
-   <p align="left">XML-RPC Flood</p>
-   <p align="left">UDP Flood</p>
-   <p align="left">ICMP Flood</p>
+   <p align="left">☢️ HTTP & HTTPS Flood</p>
+   <p align="left">☢️ TCP Flood</p>
+   <p align="left">☢️ JSON Flood</p>
+   <p align="left">☢️ POST Flood</p>
+   <p align="left">☢️ XML-RPC Flood</p>
+   <p align="left">☢️ UDP Flood</p>
+   <p align="left">☢️ ICMP Flood</p>
 </div>
 
 <div align="center">
@@ -33,9 +33,9 @@
 
 ---
 
-<h2 align="center">Installation & Usages</h2>
+<h2 align="center">⚙️ Installation & Usages</h2>
 
-```shell command
+```💻 shell command
 git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
 cd TOM7-ARMED-ZAPGUNS-V2
 pip install -r requirements.txt
