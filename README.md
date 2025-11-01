@@ -51,7 +51,7 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
 ---
 
 <div align="center">
-   <h2 align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="50" height="50"> Support TOM7</h2>
+   <h2 align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="80" height="80"> Support TOM7</h2>
    <p align="left">
       By supporting Me, I will create new greatest think thats you never seen before.
    </p>
