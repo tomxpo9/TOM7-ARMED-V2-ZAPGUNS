@@ -9,6 +9,12 @@
 
 <p align="center" color="green" style="italic">Please Dont Attack Any Website Without Any Permission!</p>
 
+<div align="center">
+   <img src="https://icon-library.com/images/github-icon-vector/github-icon-vector-27.jpg" width="64" height="64"/>
+   <img src="https://brandlogos.net/wp-content/uploads/2021/11/discord-logo.png"  width="64" height="64" alt="discord" />
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="64" height="64" alt="telegram" />
+</div>
+
 <p align="center">
   <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
 </p>
