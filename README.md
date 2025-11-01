@@ -3,8 +3,8 @@
 
 ---
 
+<p align="center"><img src="https://c.top4top.io/p_3591ctfiv1.gif" height="100" width="100"></p>
 <h3 align="center">By TOM7 For Peoples & Freedom</h3>
-<p align="center"><img src="https://e.top4top.io/p_3591myio31.gif" height="100" width="100"></p>
 
 ---
 
@@ -38,7 +38,7 @@
 
 ---
 
-<h2 align="center"><img src="https://j.top4top.io/p_3591zhz0p1.gif" width="50" height="50"> Installation & Usages</h2>
+<h2 align="center"><img src="https://j.top4top.io/p_3591zhz0p1.gif" width="70" height="70"> Installation & Usages</h2>
 
 ```💻 shell command
 git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
