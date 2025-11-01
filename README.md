@@ -2,7 +2,7 @@
 
 ---
 
-<h3 align="center">✊🏻 By TOM7 For Peoples</h3>
+<h3 align="center">✊🏻 By TOM7 For Peoples & Freedom</h3>
 <p align="center"><img src="https://e.top4top.io/p_3549l2rx01.gif" height="300" width="300"></p>
 
 ---
@@ -46,7 +46,7 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
 ---
 
 <div align="center">
-   <h2 align="center">Support TOM7</h2>
+   <h2 align="center">🤝🏻 Support TOM7 🤝🏻</h2>
    <p align="left">
       By supporting Me, I will create new greatest think thats you never seen before.
    </p>
