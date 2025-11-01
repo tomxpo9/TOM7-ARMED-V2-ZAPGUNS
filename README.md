@@ -9,7 +9,7 @@
 ---
 
 <div align="center">
-   <h3 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="50" height="50"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="50" height="50"></h3>
+   <h3 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"></h3>
    <p align="center">Please Dont Attack Any Website Without The Owner Permission.</p>
    <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart Brother</p>
 </div>
@@ -17,7 +17,7 @@
 ---
 
 <div align="center">
-   <h3>TOM7 ZAPGUNS Features <img src="https://h.top4top.io/p_3591cryr31.gif" width="50" height="50"></h3>
+   <h3>TOM7 ZAPGUNS Features <img src="https://h.top4top.io/p_3591cryr31.gif" width="30" height="30"></h3>
    <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
    <p align="left"><li align="left"> TCP Flood</li></p>
    <p align="left"><li align="left"> JSON Flood</li></p>
@@ -51,7 +51,7 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
 ---
 
 <div align="center">
-   <h2 align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="80" height="80"> Support TOM7</h2>
+   <h2 align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="100" height="100"> Support TOM7</h2>
    <p align="left">
       By supporting Me, I will create new greatest think thats you never seen before.
    </p>
