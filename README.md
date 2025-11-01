@@ -28,15 +28,12 @@
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="30" height="30" alt="telegram" />
 </div>
 
-<p align="center">
-  <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
-</p>
 
 [python3]: https://python.org 'Python3'
 
 ---
 
-**Installation & Usage**
+<h2 align="center">Installation & Usages</h2>
 
 ```shell command
 git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
