@@ -5,9 +5,9 @@
 <p align="center" color="green" style="italic">Please Dont Attack Any Website Without Any Permission!</p>
 
 <p align="center">
-  <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS">
-  <img src="" alt="Attack Preview">
-  <img src="" alt="Script Preview">
-  <img src="" alt="Available Methods">
+  <img src="" alt="TOM7 ARMED V2 - TM7 ZAPGUNS" width="16" height="16">
+  <img src="" alt="Attack Preview" width="16" height="16">
+  <img src="" alt="Script Preview" width="16" height="16">
+  <img src="" alt="Available Methods" width="16" height="16">
 </p>
 
