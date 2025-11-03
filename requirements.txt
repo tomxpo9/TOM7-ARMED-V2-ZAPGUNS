@@ -1,0 +1,15 @@
+requests
+pysocks
+itertools
+urllib
+http.client
+colorama
+socks
+threading
+ssl
+rich
+flask
+concurrent.futures
+string
+logging
+signal
