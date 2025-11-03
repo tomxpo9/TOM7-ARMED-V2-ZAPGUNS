@@ -8,7 +8,7 @@
    <h2 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"></h2>
    <h5>
    <p align="center">Please Dont Attack Any Website Without The Owner Permission.</p>
-   <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart Brother</p>
+   <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart</p>
    </h5>
 </div>
 
@@ -64,7 +64,7 @@
 ```💻 shell command
 git clone https://github.com/tomxpo9/TOM7-ARMED-ZAPGUNS-V2.git
 cd TOM7-ARMED-ZAPGUNS-V2
-pip install -r requirements.txt
+pip3 install -r requirements.txt --break-system-packages
 sudo su
 python3 TOM7-ARMED-ZAPGUNS-V2.py
 ```
