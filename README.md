@@ -1,30 +1,54 @@
 <h1 align="center" color="red">TOM7 ARMED V2 | TM7 ZAPGUNS</h1>
-<p align="center"><img src="https://c.top4top.io/p_3591qau901.gif" width="200" height="200"></p>
-
----
-
-<p align="center"><img src="https://e.top4top.io/p_3591mcjz81.gif" height="150" width="150"></p>
+<p align="center"><img src="https://b.top4top.io/p_3594dvh761.jpeg" width="300" height="200"></p>
 <h3 align="center">By TOM7 For Peoples & Freedom</h3>
 
 ---
 
 <div align="center">
-   <h3 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"></h3>
+   <h2 align="center"><img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"> WARNING & DISCLAIMER <img src="https://f.top4top.io/p_3591is0va1.gif" width="30" height="30"></h2>
+   <h5>
    <p align="center">Please Dont Attack Any Website Without The Owner Permission.</p>
    <p align="center">Im Not Responsible For The Destructions You Where Made. Be Smart Brother</p>
+   </h5>
 </div>
 
 ---
 
 <div align="center">
-   <h3><img src="https://h.top4top.io/p_3591cryr31.gif" width="30" height="30"> TOM7 ZAPGUNS Features</h3>
+   <h2> TOM7 ZAPGUNS Features</h2>
+   <h3>Available Attack Methods 💣</h3>
+   <br>
+   <h4>LAYER 7 | Application 📑</h4>
+   <h5>
    <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
-   <p align="left"><li align="left"> TCP Flood</li></p>
-   <p align="left"><li align="left"> JSON Flood</li></p>
+   <p align="left"><li align="left"> GET Flood</li></p>
    <p align="left"><li align="left"> POST Flood</li></p>
+   <p align="left"><li align="left"> JSON Flood</li></p>
+   <p align="left"><li align="left"> HEAD Flood</li></p>
+   <p align="left"><li align="left"> PUT Flood</li></p>
+   <p align="left"><li align="left"> DELETE Flood</li></p>
    <p align="left"><li align="left"> XML-RPC Flood</li></p>
+   </h5>
+   <br>
+   <h4>LAYER 4 | Transports 📡</h4>
+   <h5>
+   <p align="left"><li align="left"> TCP Flood</li></p>
    <p align="left"><li align="left"> UDP Flood</li></p>
    <p align="left"><li align="left"> ICMP Flood</li></p>
+   </h5>
+   <br>
+   <h3>WAF Evasion Supports 🛡️</h3>
+   <h5>
+   <p align="left"><li align="left">Random User-Agents Rotation </li></p>
+   <p align="left"><li align="left">Random Proxies Rotation</li></p>
+   <p align="left"><li align="left">Random Referers</li></p>
+   <p align="left"><li align="left">Random Payloads</li></p>
+   <p align="left"><li align="left">Random Headers Spoofing</li></p>
+   <p align="left"><li align="left">Random WAF Bypass [ Cloudflare, AWS, Azure, Digital Ocean, Nginx & More ]</li></p>
+   <p align="left"><li align="left">TOR Network Support</li></p>
+   <p align="left"><li align="left">Proxychains Support</li></p>
+   </h5>
+   <br>
 </div>
 
 <div align="center">
@@ -32,9 +56,6 @@
    <img src="https://brandlogos.net/wp-content/uploads/2021/11/discord-logo.png"  width="30" height="30" alt="discord" />
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="30" height="30" alt="telegram" />
 </div>
-
-
-[python3]: https://python.org 'Python3'
 
 ---
 
@@ -54,10 +75,14 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
    <p align="center"><img src="https://i.top4top.io/p_3591fg50i1.gif" width="200" height="200"></p>
    <h2 align="center">Support TOM7</h2>
    <p align="left">
-      By supporting Me, I will create new greatest think thats you never seen before.
+      By supporting Me, I will create new greatest think thats you never seen before.<br>One Hand For All, Together We Strong.
+   </p>
+   <p align="left">
+      <li align="left">Instagram: @tom7_xp</li>
+      <li align="left">Telegram: https://t.me/c/2327130546/1</li>
    </p>
    <br>
-   <p align="left">
+   <h5 align="center">
       &copy; Copyright TOM7 2025
-   </p>
+   </h5>
 </div>
