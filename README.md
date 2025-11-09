@@ -53,7 +53,8 @@
 
 <div align="center">
    <img src="https://icon-library.com/images/github-icon-vector/github-icon-vector-27.jpg" width="30" height="30"/>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="30" height="30" alt="telegram" />
+   <img src="https://d.top4top.io/p_3600icl9v1.png" width="30" height="30" alt="Telegram" />
+   <img src="https://b.top4top.io/p_3600ik8z41.png" width="30" height="30" alt="Discord" />
 </div>
 
 ---
