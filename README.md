@@ -19,7 +19,7 @@
    <h3>Available Attack Methods 💣</h3>
    <br>
    <h4>LAYER 7 | Application 📑</h4>
-   <h5>
+   <h5 align="left">
    <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
    <p align="left"><li align="left"> GET Flood</li></p>
    <p align="left"><li align="left"> POST Flood</li></p>
@@ -31,14 +31,14 @@
    </h5>
    <br>
    <h4>LAYER 4 | Transports 📡</h4>
-   <h5>
+   <h5 align="left">
    <p align="left"><li align="left"> TCP Flood</li></p>
    <p align="left"><li align="left"> UDP Flood</li></p>
    <p align="left"><li align="left"> ICMP Flood</li></p>
    </h5>
    <br>
    <h3>WAF Evasion Supports 🛡️</h3>
-   <h5>
+   <h5 align="left">
    <p align="left"><li align="left">Random User-Agents Rotation </li></p>
    <p align="left"><li align="left">Random Proxies Rotation</li></p>
    <p align="left"><li align="left">Random Referers</li></p>
