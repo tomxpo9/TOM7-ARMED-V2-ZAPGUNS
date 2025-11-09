@@ -16,7 +16,7 @@
 
 <div align="center">
    <h2> TOM7 ZAPGUNS Features</h2>
-   <h3>Available Attack Methods 💣</h3>
+   <h3>Available Attack Methods <img src="https://i.top4top.io/p_3600hefl31.png" width="30" height="30" alt="ATTACK VECTOR" /></h3>
    <br>
    <h4>LAYER 7 | Application 📑</h4>
    <h5 align="left">
