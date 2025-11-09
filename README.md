@@ -37,7 +37,7 @@
    <p align="left"><li align="left"> ICMP Flood</li></p>
    </h5>
    <br>
-   <h3>WAF Evasion Supports 🛡️</h3>
+   <h3>WAF Evasion Supports <img src="https://g.top4top.io/p_36001bfaz1.png" width="30" height="30" alt="WAF SHIELD" /></h3>
    <h5 align="left">
    <p align="left"><li align="left">Random User-Agents Rotation </li></p>
    <p align="left"><li align="left">Random Proxies Rotation</li></p>
