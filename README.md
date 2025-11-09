@@ -78,8 +78,16 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
       By supporting Me, I will create new greatest think thats you never seen before.<br>One Hand For All, Together We Strong.
    </p>
    <p align="left">
-      <li align="left">Instagram: @tom7_xp</li>
-      <li align="left">Telegram: https://t.me/c/2327130546/1</li>
+      <li align="left">
+         <p align="left">
+            Instagram: https://instagram.com/tom7_xp
+         </p>
+      </li>
+      <li align="left">
+         <p align=""left>
+            Telegram: https://t.me/c/2327130546/1
+         </p>
+      </li>
    </p>
    <br>
    <h5 align="center">
