@@ -84,7 +84,7 @@ python3 TOM7-ARMED-ZAPGUNS-V2.py
          </p>
       </li>
       <li align="left">
-         <p align=""left>
+         <p align="left">
             Telegram: https://t.me/c/2327130546/1
          </p>
       </li>
