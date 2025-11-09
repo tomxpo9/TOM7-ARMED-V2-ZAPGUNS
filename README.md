@@ -20,14 +20,14 @@
    <br>
    <h4>LAYER 7 | Application 📑</h4>
    <h5 align="left">
-   <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
-   <p align="left"><li align="left"> GET Flood</li></p>
-   <p align="left"><li align="left"> POST Flood</li></p>
-   <p align="left"><li align="left"> JSON Flood</li></p>
-   <p align="left"><li align="left"> HEAD Flood</li></p>
-   <p align="left"><li align="left"> PUT Flood</li></p>
-   <p align="left"><li align="left"> DELETE Flood</li></p>
-   <p align="left"><li align="left"> XML-RPC Flood</li></p>
+      <p align="left"><li align="left"> HTTP & HTTPS Flood</li></p>
+      <p align="left"><li align="left"> GET Flood</li></p>
+      <p align="left"><li align="left"> POST Flood</li></p>
+      <p align="left"><li align="left"> JSON Flood</li></p>
+      <p align="left"><li align="left"> HEAD Flood</li></p>
+      <p align="left"><li align="left"> PUT Flood</li></p>
+      <p align="left"><li align="left"> DELETE Flood</li></p>
+      <p align="left"><li align="left"> XML-RPC Flood</li></p>
    </h5>
    <br>
    <h4>LAYER 4 | Transports 📡</h4>
@@ -39,14 +39,14 @@
    <br>
    <h3>WAF Evasion Supports <img src="https://g.top4top.io/p_36001bfaz1.png" width="30" height="30" alt="WAF SHIELD" /></h3>
    <h5 align="left">
-   <p align="left"><li align="left">Random User-Agents Rotation </li></p>
-   <p align="left"><li align="left">Random Proxies Rotation</li></p>
-   <p align="left"><li align="left">Random Referers</li></p>
-   <p align="left"><li align="left">Random Payloads</li></p>
-   <p align="left"><li align="left">Random Headers Spoofing</li></p>
-   <p align="left"><li align="left">Random WAF Bypass [ Cloudflare, AWS, Azure, Digital Ocean, Nginx & More ]</li></p>
-   <p align="left"><li align="left">TOR Network Support</li></p>
-   <p align="left"><li align="left">Proxychains Support</li></p>
+      <p align="left"><li align="left">Random User-Agents Rotation </li></p>
+      <p align="left"><li align="left">Random Proxies Rotation</li></p>
+      <p align="left"><li align="left">Random Referers</li></p>
+      <p align="left"><li align="left">Random Payloads</li></p>
+      <p align="left"><li align="left">Random Headers Spoofing</li></p>
+      <p align="left"><li align="left">Random WAF Bypass [ Cloudflare, AWS, Azure, Digital Ocean, Nginx & More ]</li></p>
+      <p align="left"><li align="left">TOR Network Support</li></p>
+      <p align="left"><li align="left">Proxychains Support</li></p>
    </h5>
    <br>
 </div>
